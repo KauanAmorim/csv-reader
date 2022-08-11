@@ -83,3 +83,12 @@ mesmo que o teste tenha passado.
 Acabou que eu fiz um curso inteiro de phpunit praticando bastante e não consegui
 implementar os testes a tempo, futuramente será implementado para amadurecer o conhecimento.
 
+---
+
+## Observações
+
+Foi a primeira vez que acabei me deparando como o PHP-FPM, ele pode acabar ajudar bastante na execução do código, e futuramente será implementado algo relacionado,
+acabei descobrindo por causa de um video sobre PHP distribuido e paralelo e depois na alura vi um curso de php paralelo e me deparei com o PHP-FPM
+
+video - https://www.youtube.com/watch?v=exf0HPoV1MA&t=179s&ab_channel=iMasters
+curso - https://www.alura.com.br/curso-online-php-parallel-programacao-paralela
