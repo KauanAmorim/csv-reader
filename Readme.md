@@ -40,17 +40,26 @@ extension=php_pgsql.dll
 **Linux**<br/>
 sudo apt install php7.4-pgsql
 
-### instalar dependências
-composer install
-
 ### Levantar container de banco de dados.
 sudo docker-compose up -d
 
+### instalar dependências
+composer install
+
 ### executar migrations
-php bin/console doctrine:migrations:migrate
+composer migrate-db
 
 ### iniciar aplicação
-php -S localhost:3333 -t public/
+composer start-server
+
+---
+
+## Validação de PSRs
+
+Para validar as PSRs, eu instalei uma dependência de 
+desenvolvimento chamada php_codesniffer, use:
+
+composer checkPSRs
 
 ---
 
