@@ -63,6 +63,15 @@ composer checkPSRs
 
 ---
 
+### Database settings
+
+host: 0.0.0.0
+port: 5432
+dbname: uello
+password: password
+
+---
+
 ### O que pode melhorar e será implementado futuramente
 
 **Ambiente Docker**<br/>
