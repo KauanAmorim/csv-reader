@@ -92,3 +92,4 @@ acabei descobrindo por causa de um video sobre PHP distribuido e paralelo e depo
 
 video - https://www.youtube.com/watch?v=exf0HPoV1MA&t=179s&ab_channel=iMasters
 curso - https://www.alura.com.br/curso-online-php-parallel-programacao-paralela
+      - https://www.alura.com.br/conteudo/php-parallel-programacao-paralela
