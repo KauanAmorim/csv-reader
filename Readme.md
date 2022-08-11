@@ -1,15 +1,63 @@
+# Requisitos
+- PHP >= 7.4
+- Composer
+- Docker
 
-Para não dar erro em pelo menos 3 arquivos CSV de 10MB, será necessário mudar o php.ini e atualizar para 30 MB:
-- upload_max_filesize
-- post_max_size
+---
 
+# Tecnologias
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg" height="40" width="52" alt="composer logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" width="52" alt="php logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg" height="40" width="52" alt="phpstorm logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" width="52" alt="docker logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" width="52" alt="linux logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" width="52" alt="postgresql logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" height="40" width="52" alt="symfony logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/doctrine/doctrine-original.svg" height="40" width="52" alt="doctrine logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="52" alt="html5 logo"  />
+</div>
 
-Windows
+###
+
+---
+# Passos
+Siga os passos de forma ordenada.
+
+### Clonar repositório
+git clone git@github.com:KauanAmorim/symfony-uello.git
+
+### Alterar dados no php.ini
+- upload_max_filesize=40M
+- post_max_size=40M 
+
+### habilitar extensão postgresql  
+**Windows**<br/>
 extension=php_pgsql.dll
 
-Linux
-Para liberar o driver do postgresql
-- sudo apt install php7.4-pgsql
+**Linux**<br/>
+sudo apt install php7.4-pgsql
 
+### instalar dependências
+composer install
 
+### Levantar container de banco de dados.
+sudo docker-compose up -d
+
+### executar migrations
 php bin/console doctrine:migrations:migrate 
+
+---
+
+### O que não foi implementado e será implementado futuramente
+
+**Ambiente Docker**<br/>
+Não consegui fazer a tempo um ambiente docker 100% para só subir o 
+docker e entrar na aplicação, mas futuramente irei adicionar isso no repositório, 
+mesmo que o teste tenha passado.
+
+**Testes**<br/>
+Acabou que eu fiz um curso inteiro de phpunit praticando bastante e não consegui
+implementar os testes a tempo, futuramente será implementado para amadurecer o conhecimento.
+
