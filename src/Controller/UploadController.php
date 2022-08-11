@@ -24,14 +24,15 @@ class UploadController extends AbstractController
     /**
      * @Route("/", methods={"GET"})
      */
-    public function formAction(): Response {
+    public function formAction(): Response
+    {
         return $this->render('upload.html.twig');
     }
 
     /**
      * @Route("/upload", methods={"POST"}, name="upload_file")
      */
-    public  function uploadAction(): JsonResponse
+    public function uploadAction(): JsonResponse
     {
         try {
             ob_start();

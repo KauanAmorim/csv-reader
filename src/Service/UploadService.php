@@ -89,7 +89,7 @@ class UploadService
     {
         $tmpFileName = $this->files['file']['tmp_name'];
         $isReadable = is_readable($tmpFileName);
-        if(!$isReadable) {
+        if (!$isReadable) {
             throw new Exception('Não é possivel ler o arquivo');
         }
     }
@@ -108,8 +108,7 @@ class UploadService
 
     private function treatLine($line): void
     {
-        if($line[0] && $line[1] && $line[2] && $line[3] && $line[4]) {
-
+        if ($line[0] && $line[1] && $line[2] && $line[3] && $line[4]) {
             $from_postcode = $line[0];
             $to_postcode = $line[1];
             $from_weight = $line[2];
@@ -117,7 +116,11 @@ class UploadService
             $cost = $line[4];
 
             $clientFreight = new ClientFreight(
-                $from_postcode, $to_postcode, $from_weight, $to_weight, $cost
+                $from_postcode,
+                $to_postcode,
+                $from_weight,
+                $to_weight,
+                $cost
             );
 
             $this->entityManager->persist($clientFreight);

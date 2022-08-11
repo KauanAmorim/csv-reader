@@ -44,8 +44,11 @@ class ClientFreight
     private $cost;
 
     public function __construct(
-        $from_postcode, $to_postcode,
-        $from_weight, $to_weight, $cost
+        $from_postcode,
+        $to_postcode,
+        $from_weight,
+        $to_weight,
+        $cost
     ) {
         $this->from_postcode = $from_postcode;
         $this->to_postcode = $to_postcode;

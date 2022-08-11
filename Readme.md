@@ -22,6 +22,7 @@
 ###
 
 ---
+
 # Passos
 Siga os passos de forma ordenada.
 
@@ -46,11 +47,14 @@ composer install
 sudo docker-compose up -d
 
 ### executar migrations
-php bin/console doctrine:migrations:migrate 
+php bin/console doctrine:migrations:migrate
+
+### iniciar aplicação
+php -S localhost:3333 -t public/
 
 ---
 
-### O que não foi implementado e será implementado futuramente
+### O que pode melhorar e será implementado futuramente
 
 **Ambiente Docker**<br/>
 Não consegui fazer a tempo um ambiente docker 100% para só subir o 
