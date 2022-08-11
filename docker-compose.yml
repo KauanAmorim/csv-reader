@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  pgsql:
+    container_name: 'db_pgsql'
+    image: postgres:11.4
+    restart: always
+    environment:
+      TZ: 'America/Sao_Paulo'
+      POSTGRES_USER: 'root'
+      POSTGRES_PASSWORD: 'password'
+      POSTGRES_DB: 'uello'
+    volumes:
+      - ./pgsql:/var/lib/postgresql/data:rw
+    expose:
+      - '5432'
+    ports:
+      - '5432:5432'
+    networks:
+      - network-database
+
+networks:
+  network-database:
+    driver: bridge
