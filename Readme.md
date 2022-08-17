@@ -35,7 +35,7 @@ git clone git@github.com:KauanAmorim/symfony-uello.git
 
 ### habilitar extensão postgresql  
 **Windows**<br/>
-extension=php_pdo_pgsql.dll
+extension=php_pdo_pgsql.dll<br/>
 extension=php_pgsql.dll
 
 **Linux**<br/>
